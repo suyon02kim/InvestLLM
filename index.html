@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat with Gemini AI</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    .chat-container {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #ddd;
+      padding: 10px;
+      height: 500px;
+      overflow-y: scroll;
+    }
+    .message {
+      margin-bottom: 10px;
+    }
+    .model-message {
+      max-width: 500px; 
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      background-color: #e0e0ff;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    .message p {
+      margin: 5px 0;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: #eee;
+      color: #333;
+    }
+    .user-input {
+      display: flex;
+      justify-content: flex-end;
+      background-color: #c9c9f6;
+      color: #333;
+    }
+    .message img {
+      width: 100px;
+      height: auto;
+    }
+    .input-container {
+      display: flex;
+      margin-top: 10px;
+    }
+    .input-container input {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    .input-container button {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .photo-input-container input{
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ddd; 
+      border-radius: 5px; 
+    }
+
+    .photo-input-container button{
+      padding: 10px; 
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: #fff;
+      cursor:copy;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Chat with Gemini AI</h1>
+  <div class="chat-container" id="chat-container"></div>
+  <div class="input-container">
+    <input type="text" id="message-text" placeholder="What is on your mind?">
+    <input type="file" accept="image/jpeg, image/png, image/webp, image/heic, image/heif" id="message-pic">
+    <button id="send-button">Send</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
